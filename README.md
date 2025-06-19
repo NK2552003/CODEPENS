@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>✨ Nitish's CodePen Collection ✨</h1>
+  <h1>✨ CodePen Collection ✨</h1>
   <p>
     <b>A showcase of creative web experiments, UI components, and interactive demos.<br>
     Each project is inspired by curiosity, learning, and a passion for modern web development.</b>
