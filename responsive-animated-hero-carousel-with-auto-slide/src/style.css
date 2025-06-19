@@ -1,0 +1,167 @@
+:root {
+  --transition-duration: 0.6s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex-col;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+body {
+  background: #111;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  padding: 1rem;
+  display: flex-col;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  max-width: 100%;
+  height: 80vh;
+  min-height: 400px;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all var(--transition-duration) ease-in-out;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.slide.exit-left {
+  transform: translateX(-100%);
+}
+
+.slide.exit-right {
+  transform: translateX(100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1)
+  );
+  z-index: 0;
+}
+
+.slide-content {
+  padding: 2rem;
+  z-index: 2;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.slide-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.slide-content .author {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.controls {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 32px;
+  background-color: #60a5fa;
+}
+
+.arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.arrow-btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+    padding: 1.5rem;
+  }
+
+  .slide-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .slide-content p {
+    display: none;
+  }
+}

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Distrela";
+  src: url("https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Regular.otf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  position: relative;
+  background-color: black;
+  overflow-x: hidden;
+}
+canvas {
+  display: block;
+  z-index: 4;
+}
+.char {
+  position: absolute;
+  transition: transform 0.2s ease;
+  animation: float 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back down */
+  }
+}
+
+.section1 {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+.section2 {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  font-family: "Distrela";
+  font-size: 60px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.name {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: -4;
+  font-size: 8rem;
+  font-family: "Distrela";
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.513);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.476);
+  color: transparent;
+}

@@ -1,0 +1,467 @@
+:root {
+  --primary: #ffa033;
+  --background: #000000;
+  --text: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px); */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 160, 51, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-white {
+  background: var(--text);
+  color: var(--background);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.circles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* top:20%; */
+  width: 100%;
+  height: 100%;
+  /* border:1px solid red; */
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  border: 9.5px solid black;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+}
+
+.circle-1 {
+  background: var(--primary);
+
+  position: absolute;
+  left: 17%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  justify-content: center;
+  /* padding: 2rem; */
+  /* text-align: center; */
+  font-size: 1.2rem;
+}
+.pra {
+  font-weight: 500;
+  padding-left: 2.5rem;
+  padding-right: 45%;
+}
+.logoTe {
+  position: absolute;
+  left: 125px;
+}
+.circle-2 {
+  background: #4a4a4a;
+  position: absolute;
+  z-index: 100;
+  left: 34%;
+  background-image: url("https://wallpapercave.com/wp/wp8950834.jpg");
+  background-size: cover;
+  z-index: 1;
+}
+
+.circle-3 {
+  background: #2a2a2a;
+  position: absolute;
+  z-index: 60;
+  left: 51%;
+  background-image: url("https://wallpapercave.com/wp/wp5388949.jpg");
+  background-size: cover;
+}
+.stroke-text {
+  font-size: 24rem; /* Adjust as needed */
+  font-weight: bold; /* Makes the stroke more visible */
+  color: transparent; /* No fill color */
+  -webkit-text-stroke: 1px white; /* Stroke with white color */
+  text-align: center;
+  margin-top: 20px;
+  z-index: -1;
+  paint-order: stroke; /* Ensure the stroke is painted first */
+}
+.hero-content {
+  position: relative;
+  z-index: 200;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15%;
+}
+
+.hero-content h1 {
+  font-size: 6.5rem;
+  font-weight: 700;
+  /* margin-bottom: 2rem; */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  color: rgba(255, 255, 255, 0.866);
+}
+
+/* Features Section */
+.features {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links,
+  .auth-buttons {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+.unique-button {
+  background-color: white;
+  padding: 16px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: black;
+}
+.unique-button-arrow {
+  background-color: rgba(255, 255, 255, 0.789);
+  border: 1px solid rgba(255, 255, 255, 0.749);
+  padding: 16px 14px;
+  margin-left: 4px;
+  border-radius: 40px;
+}
+.unique-button:hover {
+}
+.btn-div {
+  margin-left: 50px;
+  height: 100%;
+}
+.button-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 100;
+}
+.button-panel-1 {
+  left: 10px;
+}
+.button-panel button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #333333bb;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.button-panel button:hover {
+  background: #444;
+}
+
+.button-panel button:active {
+  background: #555;
+}
+
+.button-panel button svg {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+}
+.button-panel-2 {
+  right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .stroke-text {
+    font-size: 20rem;
+  }
+  .circle {
+    width: 400px;
+    height: 400px;
+  }
+  .pra {
+    font-size: 16px;
+    padding-right: 55%;
+  }
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1100px) {
+  .stroke-text {
+    font-size: 18rem;
+  }
+  .hero-content {
+    padding-left: 20%;
+  }
+}
+@media (max-width: 769px) {
+  .stroke-text {
+    font-size: 13rem;
+  }
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+  .pra {
+    display: none;
+  }
+  .hero-content {
+    margin-top: 10px;
+    padding-left: 0px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-content h1 {
+    font-size: 5rem;
+    color: white;
+  }
+  .circle-1 {
+    left: 10%;
+  }
+  .circle-2 {
+    left: 25%;
+  }
+  .circle-3 {
+    left: 50%;
+  }
+}
+@media (max-width: 1030px) {
+  .button-panel-2 {
+    /*         bottom:0px; */
+  }
+}
+.nav-links {
+  background: rgba(41, 41, 41, 0.679);
+  padding: 4px 30px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+}

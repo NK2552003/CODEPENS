@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4b443;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+
+.grid {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 200px;
+  background: repeating-linear-gradient(
+      transparent,
+      transparent 29px,
+      #a52a2a 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 29px,
+      #a52a2a 30px
+    );
+  opacity: 0.5;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: slideIn 1s ease-in-out forwards;
+  gap: 5px;
+}
+
+.nitish,
+.pjt {
+  color: #a52a2a;
+}
+
+.k {
+  color: transparent;
+  -webkit-text-stroke: 2px #a52a2a;
+  transform: rotate(-20deg);
+  display: inline-block;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: rotate(-20deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-20deg) translateY(-10px);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 12vw;
+  }
+
+  .grid {
+    width: 90%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 14vw;
+    flex-direction: column;
+  }
+
+  .grid {
+    width: 95%;
+    height: 120px;
+  }
+
+  .k {
+    -webkit-text-stroke: 1.5px #a52a2a;
+  }
+}

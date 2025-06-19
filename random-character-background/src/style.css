@@ -1,0 +1,122 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.char {
+  position: absolute;
+  display: inline-block;
+  user-select: none;
+}
+
+#controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: rgba(96, 96, 96, 0.8);
+  border-radius: 5px;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+select,
+input[type="number"],
+input[type="color"],
+button {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.option-input {
+  display: none;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8c00ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+
+.dropdown,
+.fs {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 200px;
+}
+
+.dropdown-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #007bff;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.fsC::after {
+  content: "";
+  position: absolute;
+  top: 70.5%;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #007bff;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.dropdown:focus,
+.fs:focus {
+  border-color: whitesmoke;
+  outline: none;
+}
+
+.dropdown:hover,
+.fs:hover {
+  background-color: rgba(124, 40, 202, 0.866);
+  color: white;
+}
+input {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+}
+#charCount {
+  width: 97%;
+}
+.char {
+  transition: ease 3s;
+}

@@ -1,0 +1,65 @@
+body,
+html {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: none;
+  user-select: none;
+  font-size: 30px;
+}
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+
+  background: linear-gradient(
+    90deg,
+    #ff6f61,
+    #de639a,
+    #d897d9,
+    #af8fea,
+    #808ff2,
+    #5190f3,
+    #00a0e3,
+    #00b0d9,
+    #00c6ce,
+    #00d1c5
+  );
+
+  background-size: 1800% 1800%;
+  animation: AnimationName 3s ease infinite;
+  color: transparent;
+  display: none;
+}
+.cursor-outline {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(195, 195, 195, 0.743);
+  display: none;
+}
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 200;
+  pointer-events: none;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 28% 0%;
+  }
+
+  50% {
+    background-position: 73% 100%;
+  }
+
+  100% {
+    background-position: 28% 0%;
+  }
+}

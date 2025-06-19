@@ -1,0 +1,41 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Martel:wght@200;300;400;600;700;800;900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+<div id="controls">
+  <label for="optionSelect">Choose Option:</label>
+  <div class="dropdown-container">
+    <select id="optionSelect" class="dropdown">
+      <option value="charCount" selected>Character Count</option>
+      <option value="bgColor">Background Color</option>
+      <option value="fontColor">Font Color</option>
+    </select>
+  </div>
+
+  <div id="charCountInput" class="option-input">
+    <label for="charCount">Number of Characters:</label>
+    <input type="number" id="charCount" value="100" min="1" max="500">
+  </div>
+
+  <div id="bgColorInput" class="option-input">
+    <label for="bgColor">Background Color:</label>
+    <input type="color" id="bgColor" value="#ffffff">
+  </div>
+
+  <div id="fontColorInput" class="option-input">
+    <label for="fontColor">Font Color:</label>
+    <input type="color" id="fontColor" value="#565555">
+  </div>
+
+  <div class="fsC">
+    <label for="fontSelector">Select a Font:</label>
+    <select id="fontSelector" class="fs">
+      <option value="Arial, sans-serif">Normal</option>
+      <option value="Noto Sans JP">Noto Sans JP</option>
+      <option value="Gowun Batang">Gowun Batang</option>
+      <option value="Martel">Martel</option>
+    </select>
+  </div>
+
+  <button id="generate">Generate Characters</button>
+</div>

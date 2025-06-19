@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(19, 19, 1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.dna-container {
+  position: relative;
+  width: 160px;
+  height: 80vh;
+  transform: rotate(30deg);
+}
+
+.nucleotide-pair {
+  position: absolute;
+  width: 100%;
+  animation: rotate 20s linear infinite;
+}
+
+.nucleotide {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 40px;
+  border-radius: 9999px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.nucleotide.left {
+  left: 0;
+}
+
+.nucleotide.right {
+  right: 0;
+}
+
+.backbone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 2px;
+  background-color: rgba(144, 205, 244, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+.particle {
+  position: absolute;
+  background-color: rgba(144, 205, 244, 0.5);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+h1 {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--tx), var(--ty));
+  }
+}
+h1 {
+  font-size: 50px;
+  color: #ffffff34;
+  position: absolute;
+  z-index: -1;
+  top: 35%;
+}
+h2 {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: white;
+  color: #ffffff54;
+}

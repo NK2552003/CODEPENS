@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#loader {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+svg path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw 2.5s linear infinite alternate;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#credit {
+  font-size: 16px;
+  opacity: 0.8;
+}

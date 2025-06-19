@@ -1,0 +1,110 @@
+body {
+  min-height: calc(100vh - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.me {
+  animation: float 6s ease-in-out infinite;
+  transform-origin: center;
+  animation-delay: 0s; /* Default delay */
+  opacity: 1; /* Ensure visibility when animation starts */
+}
+svg {
+  flex-shrink: 0;
+  width: 600px;
+  max-width: 90vw;
+}
+
+.me {
+  opacity: 0;
+}
+
+.bg {
+  transform-origin: 50% 50%;
+}
+
+.ear-right {
+  transform-origin: 0% 50%;
+}
+
+.ear-left {
+  transform-origin: 100% 50%;
+}
+
+.avatar-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Basic animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes glassesGlare {
+  0%,
+  100% {
+    opacity: 0.48;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.eye {
+  animation: blink 4s infinite;
+  transform-origin: center;
+}
+
+.body {
+  animation: breathe 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.glasses {
+  animation: glassesGlare 3s ease-in-out infinite;
+}
+
+/* Hover effects */
+.avatar-container:hover .hair {
+  animation: hairWave 2s ease-in-out infinite;
+}
+
+.avatar-container:hover .eye {
+  animation: blink 2s infinite;
+}
+p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 10px;
+}

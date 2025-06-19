@@ -1,0 +1,145 @@
+* {
+  color: white;
+}
+body {
+  transition: background-image 0.5s ease;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+section {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+section div {
+  width: 650px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  padding: 20px;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+.left:nth-child(1) {
+  height: 700px;
+}
+.left div:nth-child(2) {
+  height: 200px;
+  width: 90%;
+}
+
+.leftL {
+  display: block;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 90px;
+}
+p {
+  font-size: 20px;
+  margin: 30px 50px;
+}
+
+.right div {
+  border: 0.5px solid whitesmoke;
+  margin: 5px;
+  border-radius: 50px;
+  transition: height 0.5s ease;
+}
+.right div:nth-child(1) {
+  background-position: 0% 0%;
+  width: 650px;
+  height: 700px;
+}
+.right div:nth-child(2) {
+  background-position: 27% 0%;
+  height: 600px;
+}
+.right div:nth-child(3) {
+  background-position: 35.57% 0%;
+  height: 550px;
+}
+.right div:nth-child(4) {
+  background-position: 42.86% 0%;
+  height: 440px;
+}
+.right div:nth-child(5) {
+  background-position: 51.14% 0%;
+  height: 580px;
+}
+.right div:nth-child(6) {
+  background-position: 59.43% 0%;
+  height: 630px;
+}
+.right div:nth-child(7) {
+  background-position: 67% 0%;
+  height: 660px;
+}
+.right div:nth-child(8) {
+  background-position: 75% 0%;
+  height: 700px;
+}
+#swapButton,
+#preswap {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 1px 1px black;
+  padding: 8px 12px;
+  transition: box-shadow 0.5s ease;
+}
+#swapButton:hover,
+#preswap:hover {
+  background-color: whitesmoke;
+  box-shadow: 0px 0px black;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: background-image;
+  background-size: cover;
+  backdrop-filter: blur(12px);
+  z-index: -1;
+}
+
+.right .box {
+  width: 650px;
+}
+.box {
+  background-size: cover; /* or contain, depending on your needs */
+  background-position: center;
+  display: inline-block;
+}
+
+.right div:hover {
+  height: 640px;
+  transition: height 0.5 ease;
+}
+.buttons {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+.btn {
+  height: 100px;
+}

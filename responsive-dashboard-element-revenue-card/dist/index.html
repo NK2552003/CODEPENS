@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Dashboard Element(Revenue Card)</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="theme-toggle">
+  <button id="theme-toggle-btn">
+    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </svg>
+    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+    </svg>
+  </button>
+</div>
+
+<div class="container">
+  <div class="dashboard-card">
+    <div class="card-header">
+      <div class="platform-info">
+        <div class="platform-logo" id="platform-logo">Bē</div>
+        <div class="platform-details">
+          <h2 class="platform-title">Monthly value by platform</h2>
+          <div class="platform-selector">
+            <div class="selected-platform" id="selected-platform">
+              <span>Behance</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="platform-dropdown" id="platform-dropdown">
+              <div class="platform-option" data-platform="behance" data-logo="Bē">Behance</div>
+              <div class="platform-option" data-platform="dribbble" data-logo="Dr">Dribbble</div>
+              <div class="platform-option" data-platform="codepen" data-logo="Cp">CodePen</div>
+              <div class="platform-option" data-platform="github" data-logo="Gh">GitHub</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="revenue">Revenue</button>
+        <button class="tab-btn" data-tab="leads">Leads</button>
+        <button class="tab-btn" data-tab="winrate">W/L</button>
+      </div>
+    </div>
+
+    <div class="card-content">
+      <div class="sidebar">
+        <div class="metric">
+          <p class="metric-label">Revenue</p>
+          <p class="metric-value" id="total-revenue">$20,467</p>
+        </div>
+        <div class="metric">
+          <p class="metric-label">Qual. leads</p>
+          <p class="metric-value">45 <span class="metric-secondary">/ 348</span></p>
+        </div>
+        <div class="metric">
+          <p class="metric-label">Winrate</p>
+          <p class="metric-value">36.3% <span class="metric-secondary">12 / 33</span></p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <!-- Chart.js canvas -->
+        <div class="chart-wrapper">
+          <canvas id="analytics-chart"></canvas>
+        </div>
+
+        <!-- Avatar section below chart -->
+        <div class="chart-labels">
+          <div class="month-label">
+            <div class="avatars">
+              <img src="https://randomuser.me/api/portraits/thumb/men/1.jpg" alt="User 1" class="avatar">
+              <img src="https://randomuser.me/api/portraits/thumb/women/2.jpg" alt="User 2" class="avatar">
+              <img src="https://randomuser.me/api/portraits/thumb/men/3.jpg" alt="User 3" class="avatar">
+            </div>
+          </div>
+          <div class="month-label">
+            <div class="avatars">
+              <img src="https://randomuser.me/api/portraits/thumb/women/4.jpg" alt="User 4" class="avatar">
+              <img src="https://randomuser.me/api/portraits/thumb/men/5.jpg" alt="User 5" class="avatar">
+              <img src="https://randomuser.me/api/portraits/thumb/women/6.jpg" alt="User 6" class="avatar">
+            </div>
+          </div>
+          <div class="month-label">
+            <div class="avatars">
+              <img src="https://randomuser.me/api/portraits/thumb/men/7.jpg" alt="User 7" class="avatar">
+              <img src="https://randomuser.me/api/portraits/thumb/women/8.jpg" alt="User 8" class="avatar">
+              <img src="https://randomuser.me/api/portraits/thumb/men/9.jpg" alt="User 9" class="avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Author">
+  Made with &#10084; by Nitish Kumar
+  <div>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
