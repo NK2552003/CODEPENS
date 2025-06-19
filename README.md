@@ -13,7 +13,6 @@
 
 - [Overview](#overview)
 - [Featured CodePens](#featured-codepens)
-- [Gallery](#gallery)
 - [License](#license)
 
 ---
@@ -44,29 +43,6 @@ Each folder is a standalone project, many of which are also available on my [Cod
 | <div style="width:120px;height:80px;overflow:hidden;display:flex;align-items:center;justify-content:center;"><img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-MYgpywe-2025-06-19-08_57_52.png" style="height:100%;width:auto;object-fit:cover;" /></div> | **lil' me (male version)** | Animated SVG character with transitions. | [CodePen](https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe) |
 | <div style="width:120px;height:80px;overflow:hidden;display:flex;align-items:center;justify-content:center;"><img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-NPWEKOP-2025-06-19-08_52_57.png" style="height:100%;width:auto;object-fit:cover;" /></div> | **Portfolio Sample (Devanta Ebison)** | Clean, responsive portfolio footer with credits. | [CodePen](https://codepen.io/rlaqxvbr-the-bashful/pen/NPWEKOP) |
 | <div style="width:120px;height:80px;overflow:hidden;display:flex;align-items:center;justify-content:center;"><img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-dPyayZq-2025-06-19-08_52_24.png" style="height:100%;width:auto;object-fit:cover;" /></div> | **SVG Loader (Shiva)** | SVG-based animated loader. | [CodePen](https://codepen.io/rlaqxvbr-the-bashful/pen/dPyayZq) |
-
----
-
-## 🖼️ Gallery
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-VwoLgrj-2025-06-19-08_57_21.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-EaxLLNw-2025-06-19-08_53_31.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-WbvOoXN-2025-06-19-08_50_36.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-zxxdmxJ-2025-06-19-08_51_47.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-gbYyXmM-2025-06-19-08_55_02.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-xbKpwwZ-2025-06-19-08_56_21.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-VYwLJNW-2025-06-19-08_54_29.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-KwKWPoB-2025-06-19-08_53_55.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-JoPyyxj-2025-06-19-08_56_47.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/ rlaqxvbr-the-bashful-8.55.47 AM.png" width="300" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-EaYdRVB-2025-06-19-08_55_56.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/ rlaqxvbr-the-bashful-8.58.34 AM.png" width="300" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-azOwmKd-2025-06-19-08_51_12.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-MYgpywe-2025-06-19-08_57_52.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-NPWEKOP-2025-06-19-08_52_57.png" width="90%" />
-  <img src="https://raw.githubusercontent.com/NK2552003/CODEPENS/main/Images/%20rlaqxvbr-the-bashful-full-dPyayZq-2025-06-19-08_52_24.png" width="90%" />
-</div>
 
 ---
 
